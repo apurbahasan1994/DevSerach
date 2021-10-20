@@ -1,0 +1,14 @@
+{%extends 'project/main.html'%}
+{%block title%}
+<title>{{title}}</title>
+{%endblock%}
+{%block content%}
+<h1>Friends</h1>
+<ul>
+    {%for data in projects%}
+    <li><a href="{%url 'update_project' data.id %}">{{data}}</a>&nbsp;<a
+            href="{%url 'update_project' data.id%}">Edit</a>&nbsp;<a href="{%url 'delete_project' data.id%}">Delete</a>
+    </li>
+    {%endfor%}
+</ul>
+{%endblock%}
